@@ -17,7 +17,16 @@ copyMenu();
 
 
 //Show mobile menu
-const menuButton=document.querySelector('.trigger')
+const menuButton=document.querySelector('.trigger'),
+      closeButton=document.querySelector('.t-close'),
+      addclass=document.querySelector('.site');
+
+menuButton.addEventListener('click',()=>{
+    addclass.classList.toggle('showmenu')
+});
+closeButton.addEventListener('click', ()=>{
+    addclass.classList.remove('showmenu')
+})
 
 // Show sub-menu on mobile
 
