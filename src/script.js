@@ -9,8 +9,29 @@ function copyMenu(){
     let navPlace=document.querySelector('.off-canvas nav');
     navPlace.innerHTML=mainNav.innerHTML;
 
-    let topNav=document.querySelector('.header-top');
+    let topNav=document.querySelector('.header-top .wrapper');
     let topPlace=document.querySelector('.off-canvas .thetop-nav ')
     topPlace.innerHTML=topNav.innerHTML;
 }
-copyMenu()
+copyMenu();
+
+
+//Show mobile menu
+const menuButton=document.querySelector('.trigger')
+
+// Show sub-menu on mobile
+
+const submenu=document.querySelectorAll('.has-child .icon-small')
+submenu.forEach((menu)=>{
+    menu.addEventListener('click', toggle)
+})
+
+function toggle(e){
+    e.preventDefault();
+    submenu.forEach((item)=>item !=this ? item.closest('.has-child').classList.remove('expand'): null);
+
+    if(this.closest('.has-child').classList != 'expand');
+    this.closest('.has-child').classList.toggle('expand')
+
+
+}
