@@ -691,6 +691,18 @@ form.search button:hover{
 .products .hoverable li.active a:hover{
     background-color: var(--primary-color);
 }
+.products .hoverable li:not(.active){
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .3s, opacity .2s;
+}
+.products .item:hover .hoverable li{
+     transform: translateX(0);
+     opacity: 1;
+}
+.products .hoverable li:last-child{
+    transition-delay: .1s;
+}
 /* .PRODUCTS */
 
 
