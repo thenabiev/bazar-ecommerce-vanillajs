@@ -647,6 +647,12 @@ form.search button:hover{
     right: -0.6em;
     color: var(--light-text-color);
 }
+.products :where(.image, .thumbnail) img{
+    transition: transform .3s;
+}
+.products :where(.image, .thumbnail):hover img{
+    transform: scale(1.1);
+}
 /* Big Product */
 .products.big .item{
     flex-direction: column;
@@ -656,7 +662,35 @@ form.search button:hover{
     max-width: 460px;
     margin: 0 auto;
 }
-
+.products .hoverable{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.products .hoverable li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0.25em;
+    margin: 0.25em;
+    border-radius: var(--percent50);
+    line-height: 1;
+    background-color: var(--white-color);
+    opacity: .5;
+    transition: var(--trans-bg-color), opacity .3s;
+}
+.products .item:hover .hoverable li a{
+    opacity: 1;
+}
+.products .hoverable li a:hover{
+    color: var(--white-color);
+    background-color: var(--dark-color);
+}
+.products .hoverable li.active a:hover{
+    background-color: var(--primary-color);
+}
 /* .PRODUCTS */
 
 
