@@ -43,6 +43,8 @@ body{
     line-height: 1.4;
     color: var(--dark-color);
     background-color: var(--white-color);
+    width: 100vw;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -52,6 +54,7 @@ a{
 ul{
     list-style: none;
 }
+
 img{
     max-width: var(--percent100);
     vertical-align: middle;
@@ -920,7 +923,33 @@ form.search button:hover{
 /* ################################################################## */
 /* ################################################################## */
 /* FOOTER */
+.newsletter{
+    padding: 2.5em 0;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+.newsletter h3{
+    font-size: 1.5em;
+}
+.newsletter p{
+    font-weight: var(--fw3);
+    color: var(--border-color);
+    margin: 0.5em 0px 1.5em;
+}
+.newsletter p strong{
+    color: var(--primary-color);
+}
+.newsletter form{
+    max-width: 500px;
+    width: var(--percent100);
+}
 
+
+/* Widgets */
+.widgets{
+    padding: 3.5em 2.5em;
+    background-color: var(--light-bg-color);
+}
 /* /FOOTER */
 
 
@@ -939,7 +968,8 @@ form.search button:hover{
         font-size: 1.25em;
     }
     .products.mini,
-    .banner .row{
+    .banner .row,
+    .widgets .row{
         flex: 0 0 50%;
     }
     .products.main .item{
@@ -1135,7 +1165,14 @@ form.search button:hover{
     .products.big .media{
         max-height: 373px;
     }
-    .products.main .item{
+    .products.main .item,
+    .widgets .row{
         flex: 0 0 24%;
+    }
+    /* Footer */
+    .newsletter .box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
